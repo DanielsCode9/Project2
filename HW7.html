@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 7 Group 9</title>
+    <link rel="stylesheet" type="text/css" href="../loading bar/loading-bar.css"/>
+    <script type="text/javascript" src="../loading bar/loading-bar.js"> 
+
+    function calculations() //Caroline & Audrey
+    {
+
+        if (# >= 100) // This is just a skeleton for what we need to do.
+    {    
+        output = " Perfect Marriage";
+    }   
+    else if (# >= 85)
+    {
+       output =  "Get Married!";
+    } 
+    else if(# >= 70)
+    {
+        output = "It might work";
+    }
+    else
+    {
+        output = "Keep looking!";
+    }
+
+    document.getElementById("output").innerHTML = output;
+    }
+    
+    function drawBar() //Max & Zach
+    {
+   
+
+  
+    }
+
+    function resetButton() //Kethura & Jaden
+    {
+
+    }
+    
+    </script>
+
+</head>
+
+<body>
+    <h1>Welcome to the BYU Information System's Dating Site</h1>
+    <form id="information" name="loveinformataion">
+        <fieldset style="width:1px;">
+            <legend> BYU Couple Information: </legend>
+            <label for="lovePhrase">What is the Love Phrase:</label>
+            <input type="text" id="lovePhrase" autofocus>
+            <br>
+            <label for="name1">What is the person's first and last name?</label>
+            <input type="text" id="name1">
+             <br>
+            <label for="name2">Enter the name of the second person</label>
+            <input type="text" id="name2"> 
+            <br>
+            <input type="checkbox" id="communicate"  value=".25">
+            <label for="communicate">We will communicate often</label> 
+            <br>
+            <input type="checkbox" id="selfish"  value=".25">
+            <label for="selfish"> We will not be selfish</label>
+            <br>
+            <input type="checkbox" id="serve"  value=".25">
+            <label for="serve">We will serve each other</label>
+            <br>
+            <input type="checkbox" id="bestFriend"  value=".25">
+            <label for="bestFriend">My spouse will be my best friend</label>
+            <br>
+            <input type="checkbox" id="remember"  value=".5">
+            <label for="remember">We will remember God</label>
+
+            <input type="button" value="Click Me" onclick="">
+            <input type="button" value="Reset" onclick="clickMe()"><br>
+        </fieldset>
+    </form>
+    <div
+    data-type="fill"
+    data-path=" M90.5,23.2c0-12.5-10.2-22.7-22.7-22.7
+    c-13.6,0-20.9,8.6-22.3,13.8C44.3,8.9,
+    35.1,0.5,23.2,0.5C10.7,0.5,0.5,10.7,
+    0.5,23.2c0,22.2,36.5,45.3,45,55.9
+    C53.5,67.3,90.5,46.3,90.5,23.2z" data-value="50">
+</div>
+        <svg>
+            <path fill="none" stroke="#ed2024" d="
+        M90.5,23.2c0-12.5-10.2-22.7-22.7-22.7
+        c-13.6,0-20.9,8.6-22.3,13.8C44.3,8.9,
+        35.1,0.5,23.2,0.5C10.7,0.5,0.5,10.7,
+        0.5,23.2c0,22.2,36.5,45.3,45,55.9
+        C53.5,67.3,90.5,46.3,90.5,23.2z" />
+        </svg>
+   
+        <p id="output"></p>
+    </div>
+</body>
+
+</html>
