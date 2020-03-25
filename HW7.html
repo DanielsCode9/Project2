@@ -8,96 +8,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HW 7 Group 9</title>
     <link rel="stylesheet" type="text/css" href="../loading bar/loading-bar.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <script type="text/javascript" src="../loading bar/loading-bar.js"></script>
     <script>
         function calculations() //Caroline & Audrey
         {
-            var iPower = 0;  //Set variables and initialize values. 
+            var iPower = 0; //Set variables and initialize values. 
             var iLoveCount = 0;
             var iFactor = 1;
             var sLovePhrase = document.getElementById("lovePhrase").value;
             var sPerson1Name = document.getElementById("name1").value;
             var sPerson2Name = document.getElementById("name2").value;
 
-           if(sLovePhrase === "" || sPerson1Name === "" || sPerson2Name === "") //if statement to make sure they entered data.
-           {
-               alert("Please enter both names and a love phrase." + "\n" + " You cannot be happy alone :)")
-           }
-           else
-           {
-            sLovePhrase = sLovePhrase.toLowerCase();    //Make all the string inputs lower case and assign the strings to a variable.
-            sPerson1Name = sPerson1Name.toLowerCase();
-            sPerson2Name = sPerson2Name.toLowerCase();
-
-            sLovePhrase = sLovePhrase.replace(/ /g, "");    //Make a global change within the strings to wipe out all spaces.
-            sPerson1Name = sPerson1Name.replace(/ /g, "");
-            sPerson2Name = sPerson2Name.replace(/ /g, "");
-
-            for (iCountOuter = 0; iCountOuter < (sPerson1Name.length + sPerson2Name.length); iCountOuter++) //Nested for loop to check for matches between the name strings and the love phrase.
+            if (sLovePhrase === "" || sPerson1Name === "" || sPerson2Name ===
+                "") //if statement to make sure they entered data.
             {
-                var checkName1 = sPerson1Name.charAt(iCountOuter);
-                var checkName2 = sPerson2Name.charAt(iCountOuter);
-
-                for (iCount = 0; iCount < sLovePhrase.length; iCount++) 
-                {
-                    var checkPhrase = sLovePhrase.charAt(iCount);
-                   
-                    if(checkName1 === checkPhrase)
-                    {
-                        iLoveCount++; //Increment the iLoveCount when a match is found
-                    }
-                    
-                    if(checkName2 === checkPhrase)
-                    {
-                        iLoveCount++;
-                    }
-                
-                }
-            }
-
-            if(document.getElementById("communicate").checked == true) //if the check boxes are checked then we assign iFactor a value of .25 or .5 depending on the check box. 
-            {
-                iFactor = iFactor + .25;
-            }
-            
-            if(document.getElementById("selfish").checked == true)
-            {
-                iFactor = iFactor + .25;
-            }
-
-            if(document.getElementById("serve").checked == true)
-            {
-                iFactor = iFactor + .25;
-            }
-
-            if(document.getElementById("bestFriend").checked == true)
-            {
-                iFactor = iFactor + .25;
-            }
-
-            if(document.getElementById("remember").checked == true)
-            {
-                iFactor = iFactor + .5;
-            }
-
-
-            iPower = Math.ceil(((iLoveCount / sLovePhrase.length) * 22) * iFactor); //make the calculations based on the inputs and the above code.
-
-            if (iPower >= 100) // if statement deciding which phrase should be displayed under the heart animation!
-            {
-                output = " Perfect Marriage";
-            } else if (iPower >= 85) {
-                output = "Get Married!";
-            } else if (iPower >= 70) {
-                output = "It might work";
+                alert("Please enter both names and a love phrase." + "\n" + " You cannot be happy alone :)")
             } else {
-                output = "Keep looking!";
+                sLovePhrase = sLovePhrase
+                    .toLowerCase(); //Make all the string inputs lower case and assign the strings to a variable.
+                sPerson1Name = sPerson1Name.toLowerCase();
+                sPerson2Name = sPerson2Name.toLowerCase();
+
+                sLovePhrase = sLovePhrase.replace(/ /g,
+                    ""); //Make a global change within the strings to wipe out all spaces.
+                sPerson1Name = sPerson1Name.replace(/ /g, "");
+                sPerson2Name = sPerson2Name.replace(/ /g, "");
+
+                for (iCountOuter = 0; iCountOuter < (sPerson1Name.length + sPerson2Name
+                        .length
+                        ); iCountOuter++) //Nested for loop to check for matches between the name strings and the love phrase.
+                {
+                    var checkName1 = sPerson1Name.charAt(iCountOuter);
+                    var checkName2 = sPerson2Name.charAt(iCountOuter);
+
+                    for (iCount = 0; iCount < sLovePhrase.length; iCount++) {
+                        var checkPhrase = sLovePhrase.charAt(iCount);
+
+                        if (checkName1 === checkPhrase) {
+                            iLoveCount++; //Increment the iLoveCount when a match is found
+                        }
+
+                        if (checkName2 === checkPhrase) {
+                            iLoveCount++;
+                        }
+
+                    }
+                }
+
+                if (document.getElementById("communicate").checked == true) //if the check boxes are checked then we assign iFactor a value of .25 or .5 depending on the check box. 
+                {
+                    iFactor = iFactor + .25;
+                }
+
+                if (document.getElementById("selfish").checked == true) {
+                    iFactor = iFactor + .25;
+                }
+
+                if (document.getElementById("serve").checked == true) {
+                    iFactor = iFactor + .25;
+                }
+
+                if (document.getElementById("bestFriend").checked == true) {
+                    iFactor = iFactor + .25;
+                }
+
+                if (document.getElementById("remember").checked == true) {
+                    iFactor = iFactor + .5;
+                }
+
+
+                iPower = Math.ceil(((iLoveCount / sLovePhrase.length) * 22) *
+                    iFactor); //make the calculations based on the inputs and the above code.
+
+                if (iPower >= 100) // if statement deciding which phrase should be displayed under the heart animation!
+                {
+                    output = " Perfect Marriage";
+                } else if (iPower >= 85) {
+                    output = "Get Married!";
+                } else if (iPower >= 70) {
+                    output = "It might work";
+                } else {
+                    output = "Keep looking!";
+                }
+
+                document.getElementById("output").innerHTML =
+                    output; //the actual outputting of the decided phrase from above. 
             }
 
-            document.getElementById("output").innerHTML = output; //the actual outputting of the decided phrase from above. 
-           }
-
-           drawBar(iPower);   //call the drawBar() function.
+            drawBar(iPower); //call the drawBar() function.
         }
 
         function drawBar(iPower) //Max & Zach
@@ -111,14 +110,14 @@
         function resetButton() //Kethura & Jaden
         {
             document.getElementById("lovePhrase").value = "";
-            document.getElementById("name1").value="";
-            document.getElementById("name2").value="";
+            document.getElementById("name1").value = "";
+            document.getElementById("name2").value = "";
             document.getElementById("communicate").checked = false;
             document.getElementById("selfish").checked = false;
             document.getElementById("serve").checked = false;
             document.getElementById("bestFriend").checked = false;
             document.getElementById("remember").checked = false;
-            document.getElementById("output").innerHTML ="";
+            document.getElementById("output").innerHTML = "";
 
             // We STILL need to do the reset for the heart
         }
@@ -127,47 +126,50 @@
 </head>
 
 <body>
-    <h1>Welcome to the BYU Information System's Dating Site</h1>
-    <form id="information" name="loveinformataion">
-        <fieldset style="width:1px;">
-            <legend> BYU Couple Information: </legend>
-            <label for="lovePhrase">What is the Love Phrase:</label>
-            <input type="text" id="lovePhrase" autofocus required>
-            <br>
-            <label for="name1">What is the person's first and last name?</label>
-            <input type="text" id="name1" required>
-            <br>
-            <label for="name2">Enter the name of the second person</label>
-            <input type="text" id="name2" required>
-            <br>
-            <input type="checkbox" id="communicate">
-            <label for="communicate">We will communicate often</label>
-            <br>
-            <input type="checkbox" id="selfish">
-            <label for="selfish"> We will not be selfish</label>
-            <br>
-            <input type="checkbox" id="serve">
-            <label for="serve">We will serve each other</label>
-            <br>
-            <input type="checkbox" id="bestFriend">
-            <label for="bestFriend">My spouse will be my best friend</label>
-            <br>
-            <input type="checkbox" id="remember">
-            <label for="remember">We will remember God</label>
+    <div class="bgimage">
+        <h1>Welcome to the BYU Information System's Dating Site</h1>
+        <form id="information" name="loveinformataion">
+            <fieldset style="width:1px;">
+                <legend> BYU Couple Information: </legend>
+                <label for="lovePhrase">What is the Love Phrase:</label>
+                <input type="text" id="lovePhrase" autofocus required>
+                <br>
+                <label for="name1">What is the person's first and last name?</label>
+                <input type="text" id="name1" required>
+                <br>
+                <label for="name2">Enter the name of the second person</label>
+                <input type="text" id="name2" required>
+                <br>
+                <input type="checkbox" id="communicate">
+                <label for="communicate">We will communicate often</label>
+                <br>
+                <input type="checkbox" id="selfish">
+                <label for="selfish"> We will not be selfish</label>
+                <br>
+                <input type="checkbox" id="serve">
+                <label for="serve">We will serve each other</label>
+                <br>
+                <input type="checkbox" id="bestFriend">
+                <label for="bestFriend">My spouse will be my best friend</label>
+                <br>
+                <input type="checkbox" id="remember">
+                <label for="remember">We will remember God</label>
 
-            <input type="button" value="Click Me" onclick="calculations()">
-            <input type="button" value="Reset" onclick="resetButton()"><br>
-        </fieldset>
-    </form>
-    <div class="ldBar label-center" id="myItem1" data-type="fill" data-path=" M90.5,23.2c0-12.5-10.2-22.7-22.7-22.7
-    c-13.6,0-20.9,8.6-22.3,13.8C44.3,8.9,
-    35.1,0.5,23.2,0.5C10.7,0.5,0.5,10.7,
-    0.5,23.2c0,22.2,36.5,45.3,45,55.9
-    C53.5,67.3,90.5,46.3,90.5,23.2z" data-value=50 id="myHeart"> 
+                <input type="button" value="Click Me" onclick="calculations()">
+                <input type="button" value="Reset" onclick="resetButton()"><br>
+            </fieldset>
+        </form>
+        <div class="ldBar label-center" id="myItem1" data-type="fill" 
+        data-path=" M90.5,23.2c0-12.5-10.2-22.7-22.7-22.7
+                    c-13.6,0-20.9,8.6-22.3,13.8C44.3,8.9,
+                    35.1,0.5,23.2,0.5C10.7,0.5,0.5,10.7,
+                    0.5,23.2c0,22.2,36.5,45.3,45,55.9
+                    C53.5,67.3,90.5,46.3,90.5,23.2z" data-value=50 id="myHeart">
+        </div>
+        <div class=LoveHeart>
+            <p id="output"></p>
+        </div>
     </div>
-    <div class=LoveHeart>
-        <p id="output"></p>
-     </div>
 </body>
 
 </html>
