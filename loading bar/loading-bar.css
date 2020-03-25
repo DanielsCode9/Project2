@@ -35,13 +35,38 @@
   margin-right: -50%;
   transform: translate(-50%, -50%)
 }
+body {
+  margin: auto;
+}
+
+h1 {
+  margin: 0;
+}
 
 body,h1 {font-family: "Raleway", sans-serif}
 
 body, html {height: 100%}
+
 .bgimage {
   background-image: url('/Images/vitor-pinto-5EtKHok-obE-unsplash.jpg');
   min-height: 100%;
   background-position: center;
   background-size: cover;
+}
+
+.bgimage {
+
+}
+
+.logoTop {
+
+}
+
+form {
+  margin: auto;
+  padding: 1rem 1rem;
+}
+
+.checkboxes {
+  margin: auto;
 }
