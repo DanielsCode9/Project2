@@ -118,14 +118,13 @@
             document.getElementById("bestFriend").checked = false;
             document.getElementById("remember").checked = false;
             document.getElementById("output").innerHTML = "";
-
-            // We STILL need to do the reset for the heart
+            drawBar(0);
         }
     </script>
 
 </head>
 
-<body>
+<body onload="resetButton()">
     <div class="bgimage">
         <h1>Welcome to the BYU Information System's Dating Site</h1>
         <form id="information" name="loveinformataion">
