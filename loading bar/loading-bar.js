@@ -200,8 +200,8 @@ wrap = function(content){
       "img": '',
       "path": 'M10 10L90 10M90 8M90 12',
       "fill-dir": 'btt',
-      "fill": '#25b',
-      "fill-background": '#ddd',
+      "fill": '#ff0000', //#25b
+      "fill-background": '#ddd', 
       "fill-background-extrude": 3,
       "pattern-size": null,
       "stroke-dir": 'normal',
@@ -303,7 +303,7 @@ wrap = function(content){
             path: {
               attr: {
                 d: config.path || "",
-                fill: '#fff',
+                fill: '#fff', //fff
                 stroke: '#fff',
                 filter: "url(#" + id.filter + ")"
               }
@@ -317,7 +317,7 @@ wrap = function(content){
           rect: {
             attr: {
               'class': 'mask',
-              fill: '#000'
+              fill: '#f000' 
             }
           }
         },
