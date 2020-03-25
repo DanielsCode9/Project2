@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- GROUP # 9  -  HOMEWORK # 7 -->
+<!-- DESCRIPTION: A code that takes the entered data and calculates a percentage of how compatable of a marriage would be between the two entered names. -->
 <html lang="en">
 
 <head>
@@ -10,28 +12,28 @@
     <script>
         function calculations() //Caroline & Audrey
         {
-            var iPower = 0;
+            var iPower = 0;  //Set variables and initialize values. 
             var iLoveCount = 0;
             var iFactor = 1;
             var sLovePhrase = document.getElementById("lovePhrase").value;
             var sPerson1Name = document.getElementById("name1").value;
             var sPerson2Name = document.getElementById("name2").value;
 
-           if(sLovePhrase === "" || sPerson1Name === "" || sPerson2Name === "")
+           if(sLovePhrase === "" || sPerson1Name === "" || sPerson2Name === "") //if statement to make sure they entered data.
            {
                alert("Please enter both names and a love phrase." + "\n" + " You cannot be happy alone :)")
            }
            else
            {
-            sLovePhrase = sLovePhrase.toLowerCase();
+            sLovePhrase = sLovePhrase.toLowerCase();    //Make all the string inputs lower case and assign the strings to a variable.
             sPerson1Name = sPerson1Name.toLowerCase();
             sPerson2Name = sPerson2Name.toLowerCase();
 
-            sLovePhrase = sLovePhrase.replace(/ /g, "");
+            sLovePhrase = sLovePhrase.replace(/ /g, "");    //Make a global change with in the strings to wipe out all spaces.
             sPerson1Name = sPerson1Name.replace(/ /g, "");
             sPerson2Name = sPerson2Name.replace(/ /g, "");
 
-            for (iCountOuter = 0; iCountOuter < (sPerson1Name.length + sPerson2Name.length); iCountOuter++) 
+            for (iCountOuter = 0; iCountOuter < (sPerson1Name.length + sPerson2Name.length); iCountOuter++) //Nested for loop to check for matches between the name strings and the love phrase.
             {
                 var checkName1 = sPerson1Name.charAt(iCountOuter);
                 var checkName2 = sPerson2Name.charAt(iCountOuter);
@@ -42,7 +44,7 @@
                    
                     if(checkName1 === checkPhrase)
                     {
-                        iLoveCount++;
+                        iLoveCount++; //Increment the iLoveCount when a match is found
                     }
                     
                     if(checkName2 === checkPhrase)
@@ -53,7 +55,7 @@
                 }
             }
 
-            if(document.getElementById("communicate").checked == true)
+            if(document.getElementById("communicate").checked == true) //if the check boxes are checked then we assign iFactor a value of .25 or .5 depending on the check box. 
             {
                 iFactor = iFactor + .25;
             }
@@ -79,9 +81,9 @@
             }
 
 
-            iPower = Math.ceil(((iLoveCount / sLovePhrase.length) * 22) * iFactor);
+            iPower = Math.ceil(((iLoveCount / sLovePhrase.length) * 22) * iFactor); //make the calculations based on the inputs and the above code.
 
-            if (iPower >= 100) // This is just a skeleton for what we need to do.
+            if (iPower >= 100) // if statement deciding which phrase should be displayed under the heart animation!
             {
                 output = " Perfect Marriage";
             } else if (iPower >= 85) {
@@ -92,9 +94,10 @@
                 output = "Keep looking!";
             }
 
-            document.getElementById("output").innerHTML = output;
+            document.getElementById("output").innerHTML = output; //the actual outputting of the decided phrase from above. 
            }
-           //function drawBar()
+
+           drawBar();   //call the drawBar() function.
         }
 
         function drawBar() //Max & Zach
