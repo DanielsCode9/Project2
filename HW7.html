@@ -20,8 +20,7 @@
             var sPerson1Name = document.getElementById("name1").value;
             var sPerson2Name = document.getElementById("name2").value;
 
-            if (sLovePhrase === "" || sPerson1Name === "" || sPerson2Name ===
-                "") //if statement to make sure they entered data.
+            if (sLovePhrase === "" || sPerson1Name === "" || sPerson2Name === "") //if statement to make sure they entered data.
             {
                 alert("Please enter both names and a love phrase." + "\n" + " You cannot be happy alone :)")
             } else {
@@ -99,7 +98,7 @@
             drawBar(iPower); //call the drawBar() function.
         }
 
-        function drawBar(iPower) //Max & Zach
+        function drawBar(iPower) //Feeds percentage calculated in funct calculations to the loading bar css
         {
             var bar1 = new ldBar("#myItem1");
             var bar2 = document.getElementById('myItem1').ldBar;
@@ -107,7 +106,7 @@
 
         }
 
-        function resetButton() //Kethura & Jaden
+        function resetButton() //Function to reset all the values of the html.
         {
             document.getElementById("lovePhrase").value = "";
             document.getElementById("name1").value = "";
@@ -165,7 +164,7 @@
                     0.5,23.2c0,22.2,36.5,45.3,45,55.9
                     C53.5,67.3,90.5,46.3,90.5,23.2z" data-value=50 id="myHeart">
         </div>
-        <div class=LoveHeart>
+        <div class="LoveHeart">
             <p id="output"></p>
         </div>
     </div>
