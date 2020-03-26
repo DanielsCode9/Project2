@@ -23,7 +23,12 @@
             if (sLovePhrase === "" || sPerson1Name === "" || sPerson2Name === "") //if statement to make sure they entered data.
             {
                 alert("Please enter both names and a love phrase." + "\n" + " You cannot be happy alone :)")
-            } else {
+            } 
+        
+            else {
+                var slideWhistle = new Audio();
+                slideWhistle.src = "WhistleSlide 2017_79_2.mp3"
+                slideWhistle.play()
                 sLovePhrase = sLovePhrase
                     .toLowerCase(); //Make all the string inputs lower case and assign the strings to a variable.
                 sPerson1Name = sPerson1Name.toLowerCase();
@@ -85,6 +90,9 @@
                     output = " Perfect Marriage";
                 } else if (iPower >= 85) {
                     output = "Get Married!";
+                    var slideWhistle3 = new Audio();
+                    slideWhistle3.src = "15339_1460401473.mp3"
+                    slideWhistle3.play()
                 } else if (iPower >= 70) {
                     output = "It might work";
                 } else {
@@ -94,6 +102,7 @@
                 document.getElementById("output").innerHTML =
                     output; //the actual outputting of the decided phrase from above. 
             }
+            
 
             drawBar(iPower); //call the drawBar() function.
         }
@@ -118,11 +127,17 @@
             document.getElementById("remember").checked = false;
             document.getElementById("output").innerHTML = "";
             drawBar(0);
+
+            var slideWhistle2 = new Audio();
+            slideWhistle2.src = "WhistleSlide 1021_33_4.mp3"
+            slideWhistle2.play()
         }
+
+        
     </script>
 
 </head>
-
+<!-- Resets information on loading the page, all the text and input boxes are written here as well as the loading heart-->
 <body onload="resetButton()">
     <div class="bgimage">
         <h1 class="logoTop">Welcome to the BYU Information System's Dating Site</h1>
@@ -130,14 +145,15 @@
             <form id="information" name="loveinformataion" class="formD">
 
                     <legend> BYU Couple Information: </legend>
-                    <label for="lovePhrase">What is the Love Phrase:</label>
-                    <input type="text" id="lovePhrase" autofocus required>
                     <br>
-                    <label for="name1">What is the person's first and last name?</label>
-                    <input type="text" id="name1" required>
+                    <label for="lovePhrase">What is the Love Phrase?</label>
+                    <input type="text" id="lovePhrase" placeholder="True Love" autofocus required>
                     <br>
-                    <label for="name2">Enter the name of the second person</label>
-                    <input type="text" id="name2" required>
+                    <label for="name1">What is the lover's first and last name?</label>
+                    <input type="text" id="name1" placeholder="Prince Charming" required>
+                    <br>
+                    <label for="name2">Enter the name of the second lover</label>
+                    <input type="text" id="name2" placeholder="Princess Aurora" required>
                     <br>
                     <div class="checkboxes">
                     <input type="checkbox" id="communicate">

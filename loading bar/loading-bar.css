@@ -70,3 +70,8 @@ form {
 .checkboxes {
   margin: auto;
 }
+
+legend {
+  font-size: large;
+  font-style: italic;
+}
