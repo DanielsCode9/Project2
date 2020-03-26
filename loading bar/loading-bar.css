@@ -1,13 +1,16 @@
 .ldBar {
   position: relative;
+  padding-left: 2%;
 }
 .ldBar.label-center > .ldBar-label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
+  top: -60%;
+  left: 90%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-shadow: 0 0 3px #fff;
+  
+
 }
 .ldBar-label:after {
   content: "%";
@@ -15,12 +18,16 @@
 }
 .ldBar.no-percent .ldBar-label:after {
   content: "";
+  
 }
 
 
 .LoveHeart {
   height: 5em;
   position: relative;
+  font-family: sans-serif;
+
+  
 }
 .LoveHeart p {
   margin: 0;
@@ -33,7 +40,9 @@
   top: 50%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
+  
+  
 }
 body {
   margin: auto;
@@ -48,17 +57,31 @@ body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 
 .bgimage {
-  background-image: url('/Images/vitor-pinto-5EtKHok-obE-unsplash.jpg');
+  background-image: url('/Images/bg.png');
   min-height: 100%;
-  background-position: center;
   background-size: cover;
+  
+}
+.logoTop{
+
+  text-align: center;
+  background-color: floralwhite;
+  font-weight: bolder;
+  font-size: 1.5cm;
 }
 
+.quote{
 
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
 
 form {
   margin: auto;
   padding: 1rem 1rem;
+  font-family: sans-serif;
+  font-weight: 530;
 }
 
 .checkboxes {
@@ -66,6 +89,6 @@ form {
 }
 
 legend {
-  font-size: large;
-  font-style: italic;
+  font-size: larger;
+
 }
