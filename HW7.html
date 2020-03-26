@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- GROUP # 9  -  HOMEWORK # 7 -->
-<!-- DESCRIPTION: A code that takes the entered data and calculates a percentage of how compatable of a marriage would be between the two entered names. -->
+<!--Team Members : Audrey Chiagaria, Caroline Hickey, Jaden Moore, Kethura Vennamala, Max Haines, Zachary Daniels-->
+<!-- DESCRIPTION: A code that takes the entered data and calculates a percentage of how compatible of a 
+    marriage would be between the two entered names. -->
 <html lang="en">
 
 <head>
@@ -141,20 +143,28 @@
 <body onload="resetButton()">
     <div class="bgimage">
         <h1 class="logoTop">Welcome to the BYU Information System's Dating Site</h1>
+        
+        <div class="quote"> <p>"Choose a companion you can always honor, you can always respect, 
+            one who will complement you in your own life, one to whom you can give your entire heart, your entire love, 
+            your entire allegiance, your entire loyalty." <br> - President Gordon B. Hinckley
+        </p>
+    </div>
+       
+       
         <div class="contents">
             <form id="information" name="loveinformataion" class="formD">
 
                     <legend> BYU Couple Information: </legend>
-                    <br>
+                    <br><br>
                     <label for="lovePhrase">What is the Love Phrase?</label>
-                    <input type="text" id="lovePhrase" placeholder="True Love" autofocus required>
-                    <br>
+                    <input type="text" id="lovePhrase" placeholder="True Love Never Dies" autofocus required>
+                    <br><br>
                     <label for="name1">What is the lover's first and last name?</label>
-                    <input type="text" id="name1" placeholder="Prince Charming" required>
-                    <br>
+                    <input type="text" id="name1" placeholder="Greg Allred" required>
+                    <br><br>
                     <label for="name2">Enter the name of the second lover</label>
-                    <input type="text" id="name2" placeholder="Princess Aurora" required>
-                    <br>
+                    <input type="text" id="name2" placeholder="Gina Simmons" required>
+                    <br><br>
                     <div class="checkboxes">
                     <input type="checkbox" id="communicate">
                     <label for="communicate">We will communicate often</label>
@@ -171,8 +181,8 @@
                     <input type="checkbox" id="remember">
                     <label for="remember">We will remember God</label>
                     </div>
-                    <br>
-                    <input type="button" value="Click Me" onclick="calculations()">
+                    <br><br>
+                    <input type="button" value="Click Me" onclick="calculations()"> &nbsp;
                     <input type="button" value="Reset" onclick="resetButton()"><br>
 
             </form>
@@ -184,7 +194,7 @@
                         C53.5,67.3,90.5,46.3,90.5,23.2z" data-value=50 id="myHeart">
             </div>
             <div class="LoveHeart">
-                <p id="output"></p>
+                <p id="output" style="padding-left: 1%; "></p>
             </div>
         </div>
     </div>
